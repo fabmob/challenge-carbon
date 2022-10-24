@@ -226,7 +226,7 @@ const App = () => {
                     <div className="tile is-vertical is-8">
                         <div className="tile is-parent">
                             <article className="tile is-child notification is-warning">
-                                <p className="title">Emission moyenne par kilomètre</p>
+                                <p className="title">Émission moyenne par kilomètre</p>
                                 <p className="subtitle">gCO2 / km / personne</p>
                                 <div className="content">
                                     <ResponsiveContainer width="99%" height={250}>
@@ -245,7 +245,7 @@ const App = () => {
                         </div>
                         <div className="tile is-parent">
                             <article className="tile is-child notification">
-                                <p className="title">Emissions totales par jour</p>
+                                <p className="title">Émissions totales par jour</p>
                                 <p className="subtitle">kgCO2 / jour</p>
                                 <div className="content">
                                     <ResponsiveContainer width="99%" height={250}>
@@ -264,7 +264,7 @@ const App = () => {
                         </div>
                         <div className="tile is-parent">
                             <article className="tile is-child notification">
-                                <p className="title">Emissions totales par heure de la journée</p>
+                                <p className="title">Émissions totales par heure de la journée</p>
                                 <p className="subtitle">kgCO2 / heure</p>
                                 <div className="content">
                                     <ResponsiveContainer width="99%" height={250}>
@@ -283,7 +283,7 @@ const App = () => {
                         </div>
                         <div className="tile is-parent">
                             <article className="tile is-child notification">
-                                <p className="title">(Bonus, hors-scope) Emission totales par semaine</p>
+                                <p className="title">(Bonus, hors-scope) Émissions totales par semaine</p>
                                 <p className="subtitle">kgCO2 / semaine</p>
                                 <div className="content">
                                     <ResponsiveContainer width="99%" height={250}>
@@ -302,7 +302,7 @@ const App = () => {
                         </div>
                         <div className="tile is-parent">
                             <article className="tile is-child notification">
-                                <p className="title">(Bonus, hors-scope) Distance totales par semaine</p>
+                                <p className="title">(Bonus, hors-scope) Distances totales par semaine</p>
                                 <p className="subtitle">km / semaine</p>
                                 <div className="content">
                                     <ResponsiveContainer width="99%" height={250}>
@@ -323,7 +323,7 @@ const App = () => {
                     <div className="tile is-parent is-4">
                         <article className="tile is-child notification">
                         <div className="content">
-                            <p className="title">Emissions par mode de transport</p>
+                            <p className="title">Émissions par mode de transport</p>
                             <p className="subtitle">Cumul équipe {teamID}</p>
                             <div className="content">
                                 <div className="select" style={{marginBottom: "20px"}}>
@@ -367,7 +367,7 @@ const App = () => {
                     <p>
                         Plateforme crée par <a href="http://fabmob.io" target="_blank">La fabrique des mobilités</a> pour <a href="https://jadopteunprojet.com/" target="_blank">J'adopte un projet</a>. 
                         <br/>
-                        Code source disponible sur <a href="#">Github</a>.
+                        Code source disponible sur <a href="https://github.com/fabmob/challenge-carbon" target="_blank">Github</a>.
                     </p>
                 </div>
             </footer>

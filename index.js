@@ -217,7 +217,10 @@ const App = () => {
                         Challenge #CarbonDetox, équipe {teamID} 
                     </p>
                     <p className="subtitle">
-                        <a className="is-size-7" href="#" onClick={updateTeamID}>Afficher l'autre équipe</a>
+                        Ce challenge est organisé par <a href="https://jadopteunprojet.com/" target="_blank">J'Adopte un Projet</a> dans le cadre du programme <a href="https://agremob.com/" target="_blank">Agremob</a>.<br/>
+                        Il vise à comparer sur trois semaines les efforts de deux équipes dans la réduction du cout carbone de leurs déplacements.<br/>
+                        Les données de déplacements sont récoltées via l'application <a href="https://lafabriquedesmobilites.fr/tracemob" target="_blank">tracemob</a>.<br/>
+                        Vous consultez les résultats de l'équipe {teamID}. <a href="#" onClick={updateTeamID}>Cliquez ici pour afficher l'autre équipe</a>
                     </p>
                 </div>
             </section>
@@ -283,7 +286,7 @@ const App = () => {
                         </div>
                         <div className="tile is-parent">
                             <article className="tile is-child notification">
-                                <p className="title">(Bonus, hors-scope) Émissions totales par semaine</p>
+                                <p className="title">Émissions totales par semaine</p>
                                 <p className="subtitle">kgCO2 / semaine</p>
                                 <div className="content">
                                     <ResponsiveContainer width="99%" height={250}>
@@ -302,7 +305,7 @@ const App = () => {
                         </div>
                         <div className="tile is-parent">
                             <article className="tile is-child notification">
-                                <p className="title">(Bonus, hors-scope) Distances totales par semaine</p>
+                                <p className="title">Distances totales par semaine</p>
                                 <p className="subtitle">km / semaine</p>
                                 <div className="content">
                                     <ResponsiveContainer width="99%" height={250}>

@@ -7,3 +7,11 @@
 .section {
   flex: 1;
 }
+
+.hero-body a {
+  text-decoration: underline;
+}
+
+.hero-body a:hover {
+  color: #ffffffc4 !important
+}

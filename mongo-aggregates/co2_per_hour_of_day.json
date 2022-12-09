@@ -1,0 +1,119 @@
+[{
+ $match: {
+  user_id: {
+   $in: [
+    BinData(3, 'XXX'),
+   ]
+  },
+  'metadata.key': 'analysis/inferred_section',
+  'data.start_fmt_time': {
+   $gte: '2022-09-26',
+   $lt: '2022-10-17'
+  }
+ }
+}, {
+ $group: {
+  _id: {
+   hour: {
+    $hour: {
+     date: {
+      $dateFromString: {
+       dateString: '$data.start_fmt_time'
+      }
+     }
+    }
+   },
+   mode: '$data.sensed_mode',
+   modeco2factor: {
+    $switch: {
+     branches: [
+      {
+       'case': {
+        $eq: [
+         '$data.sensed_mode',
+         3
+        ]
+       },
+       then: 0.20727
+      },
+      {
+       'case': {
+        $eq: [
+         '$data.sensed_mode',
+         4
+        ]
+       },
+       then: 0.12256
+      },
+      {
+       'case': {
+        $eq: [
+         '$data.sensed_mode',
+         5
+        ]
+       },
+       then: 0.22031
+      },
+      {
+       'case': {
+        $eq: [
+         '$data.sensed_mode',
+         6
+        ]
+       },
+       then: 0.09975
+      },
+      {
+       'case': {
+        $eq: [
+         '$data.sensed_mode',
+         7
+        ]
+       },
+       then: 0.12256
+      },
+      {
+       'case': {
+        $eq: [
+         '$data.sensed_mode',
+         8
+        ]
+       },
+       then: 0.12256
+      },
+      {
+       'case': {
+        $eq: [
+         '$data.sensed_mode',
+         9
+        ]
+       },
+       then: 0.12256
+      }
+     ],
+     'default': 0
+    }
+   }
+  },
+  distance: {
+   $sum: '$data.distance'
+  }
+ }
+}, {
+ $group: {
+  _id: {
+   hour: '$_id.hour'
+  },
+  distance: {
+   $sum: '$distance'
+  },
+  co2: {
+   $sum: {
+    $multiply: [
+     '$distance',
+     '$_id.modeco2factor'
+    ]
+   }
+  }
+ }
+}]

@@ -371,6 +371,8 @@ const App = () => {
                         Plateforme crée par <a href="http://fabmob.io" target="_blank">La fabrique des mobilités</a> pour <a href="https://jadopteunprojet.com/" target="_blank">J'adopte un projet</a>. 
                         <br/>
                         Code source disponible sur <a href="https://github.com/fabmob/challenge-carbon" target="_blank">Github</a>.
+                        <br/>
+                        Vous shouaitez répliquer le challenge ? <a href="/repliquer.html">Voici quelques informations.</a>
                     </p>
                 </div>
             </footer>
